@@ -38,7 +38,8 @@
   }
 
   .text-element-footer li a{
-    color: var(--main-c);
+    color: var(--black-c);
+    text-decoration: underline;
   }
 
   .rrss-element-footer ul{
