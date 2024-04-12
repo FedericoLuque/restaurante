@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <div class="reservation-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="cuadroNombre">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="email" [(ngModel)]="cuadroEmail">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="telefono" [(ngModel)]="cuadroTelefono">
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" placeholder="fecha" [(ngModel)]="cuadroFecha">
+      </div>
+    </div>
+    <div class="column">
+      <div class="reservation-form">
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" placeholder="hora" [(ngModel)]="cuadroHora">
+        <label for="comensales">Comensales:</label>
+        <input type="number" name="comensales" id="comensales" placeholder="comensales" [(ngModel)]="cuadroComensales">
+        <label for="solicitud">Solicitud Especial:</label>
+        <textarea name="solicitud" id="solicitud" placeholder="Escribe tu solicitud especial aquí"></textarea>
+        <button type="submit" class="submit-button" (click)="agregarReserva()">Reservar</button>
+      </div>
+    </div>
+  </div>
+</div>
