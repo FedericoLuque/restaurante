@@ -10,7 +10,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { CartaComponent } from './carta/carta.component';
 import { ReservasComponent } from './reservas/reservas.component';
-import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule } from '@angular/forms';
 import { ServicioRestauranteService } from './servicio-restaurante.service';
 import { ReservasService } from './reservas.service';
@@ -25,7 +24,6 @@ const appRoutes:Routes=[
   {path:'nosotros', component:NosotrosComponent},
   {path:'carta', component:CartaComponent},
   {path:'reservas', component:ReservasComponent},
-  {path:'contacto', component:ContactoComponent},
   {path:'**',component:ErrorComponent}
 
 ];
