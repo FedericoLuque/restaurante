@@ -18,14 +18,16 @@ import { DataServices } from './data.services';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 const appRoutes:Routes=[
   {path:'', component:InicioComponent},
   {path:'nosotros', component:NosotrosComponent},
   {path:'carta', component:CartaComponent},
   {path:'reservas', component:ReservasComponent},
+  {path:'galeria', component:GaleriaComponent},
   {path:'**',component:ErrorComponent}
-
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const appRoutes:Routes=[
     InicioComponent,
     ReservasComponent,
     HeaderComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ const appRoutes:Routes=[
     provideFirebaseApp(() => initializeApp({"projectId":"restaurante-b69c3","appId":"1:260483386429:web:2067c65812de651d136e54","storageBucket":"restaurante-b69c3.appspot.com","apiKey":"AIzaSyBqkXZsFXELqZy2ETSacnfFqvWNmeP0TKE","authDomain":"restaurante-b69c3.firebaseapp.com","messagingSenderId":"260483386429"})),
     provideFirestore(() => getFirestore())
   ],
-  providers: [ServicioRestauranteService, ReservasService, DataServices],
+  providers: [ServicioRestauranteService, ReservasService, DataServices, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
