@@ -18,14 +18,13 @@ export class NosotrosComponent implements AfterViewInit {
 
   async initMap(): Promise<void> {
     if (this.mapElement) {
-      const position = { lat: 37.374273192811344, lng: -5.95710611455027 };
-
+      const position = { lat: 37.20981752025503, lng: -3.6269303101744894 };
       const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
 
       this.map = new Map(
         this.mapElement.nativeElement,
         {
-          zoom: 18,
+          zoom: 17,
           center: position,
           mapId: 'Restaurante',
         }

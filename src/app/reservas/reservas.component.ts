@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Reservas } from './reservas.model';
 import { ReservasService } from '../reservas.service';
 import { Router } from '@angular/router';
@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './reservas.component.html',
   styleUrl: './reservas.component.css'
 })
-export class ReservasComponent {
-  title = 'restaurante';
+export class ReservasComponent implements OnInit {
+  
+  reservas: Reservas[];
 
   constructor(private router:Router, private miReserva:ReservasService) { 
 
@@ -17,7 +18,9 @@ export class ReservasComponent {
 
    }
 
-  reservas:Reservas[]=[];
+  ngOnInit(): void {
+    this.reservas = this.miReserva.reservas; // Suponiendo que tienes un método getReservas() en tu servicio que devuelve el array
+  }
 
   agregarReserva(){
     

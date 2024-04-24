@@ -1,3 +1,15 @@
+
+<div *ngIf="reservas && reservas.length > 0">
+  <ul>
+    <li *ngFor="let reserva of reservas">
+      <p>Reserva realizada a nombre de {{ reserva.nombre }}, el dia {{ reserva.fecha }} a las {{ reserva.hora }} para {{ reserva.comensales }} personas.</p>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!(reservas && reservas.length > 0)">
+  <p>Realice su reserva en el siguiente formulario</p>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="column">
@@ -19,7 +31,7 @@
         <label for="comensales">Comensales:</label>
         <input type="number" name="comensales" id="comensales" placeholder="comensales" [(ngModel)]="cuadroComensales">
         <label for="solicitud">Solicitud Especial:</label>
-        <textarea name="solicitud" id="solicitud" placeholder="Escribe tu solicitud especial aquí"></textarea>
+        <textarea name="solicitud" id="solicitud" placeholder="Escribe tu solicitud especial aquí" [(ngModel)]="cuadroSolicitudes"></textarea>
         <button type="submit" class="submit-button" (click)="agregarReserva()">Reservar</button>
       </div>
     </div>

@@ -16,13 +16,12 @@ export class ReservasService {
 
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var tlfRegex = /^\d{9}$/;
-    var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
-    if (nuevaReserva.nombre.length <1){
+    if (nuevaReserva.nombre.length <4){
       this.ventanaEmergente.mostrarAviso("Por favor, introduzca un nombre válido.")
     }
-    else if (nuevaReserva.comensales.valueOf() ===0 ){
-      this.ventanaEmergente.mostrarAviso("Por favor, introduzca la cantidad de comensales.")
+    else if (nuevaReserva.comensales.valueOf() <1 ){
+      this.ventanaEmergente.mostrarAviso("Por favor, introduzca la cantidad de comensales válida.")
     }
     else if (!emailRegex.test(nuevaReserva.email) ){
       this.ventanaEmergente.mostrarAviso("Por favor, introduzca un email válido.")
