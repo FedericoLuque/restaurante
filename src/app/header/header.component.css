@@ -27,6 +27,13 @@ header.main-header{
   color: #fff;
 }
 
+#logo{
+  width: 150px; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+  display: block; /* Convertir la imagen en un elemento de bloque */
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
 /* menu header */
 
 .nav-header{

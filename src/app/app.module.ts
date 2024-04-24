@@ -20,6 +20,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { GaleriaComponent } from './galeria/galeria.component';
+import { PoliticadeprivacidadComponent } from './politicadeprivacidad/politicadeprivacidad.component';
 
 const appRoutes:Routes=[
   {path:'', component:InicioComponent},
@@ -27,6 +28,7 @@ const appRoutes:Routes=[
   {path:'carta', component:CartaComponent},
   {path:'reservas', component:ReservasComponent},
   {path:'galeria', component:GaleriaComponent},
+  {path:'privacidad', component:PoliticadeprivacidadComponent},
   {path:'**',component:ErrorComponent}
 ];
 
@@ -39,7 +41,8 @@ const appRoutes:Routes=[
     ReservasComponent,
     HeaderComponent,
     NosotrosComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    PoliticadeprivacidadComponent
   ],
   imports: [
     BrowserModule,
