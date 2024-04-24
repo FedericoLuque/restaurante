@@ -32,13 +32,12 @@
     font-size: 2rem;
   }
   
-  @media (max-width:880px){
-    .column-3{
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
   @media (max-width:640px){
     .column-3{
-      grid-template-columns: repeat(1,1fr);
+      display: flex;
+      justify-content: center;
+    }
+    .wrap-section{
+      margin: 0px;
     }
   }

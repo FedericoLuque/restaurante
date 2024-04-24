@@ -110,15 +110,15 @@ input#check{
   }
 }
 
-/* Pantallas de 768 a 880px */
-@media (min-width:768px){
-  a.logo-header{
-    color: #fff;
-  }
-}
-
 /* Pantallas de menos de 768px */
 @media (max-width:768px){
+  #logo{
+    width: 50px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Convertir la imagen en un elemento de bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+  }
+
   header.main-header{
     margin-bottom: 4rem;
   }
