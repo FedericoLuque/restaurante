@@ -10,7 +10,7 @@ export class ReservasService {
 
   constructor(private ventanaEmergente:ServicioRestauranteService, private DataService:DataServices) { }
 
-  reservas:Reservas[]=[]; /* Array reservas. Se utiliza para mostrar las reservas en el componente y para enviarlo a la BBDD*/
+  reservas:Reservas[]=[]; /* Array reservas. Se utiliza para mostrar las reservas en el componente*/
 
   agregarReservaServicio(nuevaReserva:Reservas){
 
